@@ -1,0 +1,53 @@
+# Copyright 2020 The Data Catalog Tag History Authors.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+title: "Catalog Tag history collector"
+description: "Allow the service account to read log entry on pubsub and DataCatalog tags to write Tag records in a BigQuery table."
+stage: "BETA"
+includedPermissions:
+# Generic
+    - resourcemanager.projects.get    
+# Data Catalog permissions
+    - datacatalog.tagTemplates.getTag    
+    - datacatalog.tagTemplates.get
+    - datacatalog.tagTemplates.getTag            
+    - datacatalog.entries.get
+    - datacatalog.entries.list
+    - datacatalog.entryGroups.get
+    - datacatalog.entryGroups.list
+    - datacatalog.tagTemplates.get
+    - datacatalog.tagTemplates.getTag
+    - datacatalog.taxonomies.get
+    - datacatalog.taxonomies.list
+# BigQuery permissions    
+    - bigquery.datasets.get
+    - bigquery.datasets.getIamPolicy    
+    - bigquery.models.getData
+    - bigquery.models.getMetadata
+    - bigquery.models.list
+    - bigquery.tables.create
+    - bigquery.tables.delete
+    - bigquery.tables.export
+    - bigquery.tables.get
+    - bigquery.tables.getData
+    - bigquery.tables.getIamPolicy
+    - bigquery.tables.list    
+    - bigquery.tables.update
+    - bigquery.tables.updateData    
+# PubSub permissions
+    - pubsub.topics.get
+    - pubsub.snapshots.seek
+    - pubsub.subscriptions.consume
+    - pubsub.topics.attachSubscription
+    

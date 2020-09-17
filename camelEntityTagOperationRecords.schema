@@ -1,0 +1,157 @@
+[
+ {
+  "name": "reconcileTime",
+  "type": "TIMESTAMP",
+  "mode": "NULLABLE",
+  "description": "Time in UTC this log was processed"
+ },
+ {
+  "name": "entity",
+  "type": "RECORD",
+  "mode": "NULLABLE",
+  "fields": [
+   {
+    "name": "entityId",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The Data-Catalog's unique Id for the data entity. "
+   },
+   {
+    "name": "linkedResource",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "sqlResource",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   }
+  ]
+ },
+ {
+  "name": "auditInformation",
+  "type": "RECORD",
+  "mode": "NULLABLE",
+  "fields": [
+   {
+    "name": "insertId",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Associated AuditLog entry's insertId to uniquely identify the operation"
+   },
+   {
+    "name": "jobTime",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE",
+    "description": "Time in UTC the catalog operation completed."
+   },
+   {
+    "name": "actuator",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Email address of the authorized user."
+   },
+   {
+    "name": "operation",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields": [
+     {
+      "name": "type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Data Catalog operation type"
+     },
+     {
+      "name": "resource",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Data Catalog operation's target resource."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name": "tags",
+  "type": "RECORD",
+  "mode": "REPEATED",
+  "fields": [
+   {
+    "name": "tagId",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "templateId",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Data Catalog Tag Template Id"
+   },
+   {
+    "name": "templateName",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "column",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "fields",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "fieldId",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "fieldName",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "kind",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "boolValue",
+      "type": "BOOLEAN",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "doubleValue",
+      "type": "FLOAT",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "stringValue",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "timestampValue",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "enumValue",
+      "type": "RECORD",
+      "mode": "NULLABLE",
+      "fields": [
+       {
+        "name": "displayName",
+        "type": "STRING",
+        "mode": "NULLABLE"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+]

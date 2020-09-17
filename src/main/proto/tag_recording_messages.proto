@@ -1,0 +1,79 @@
+syntax = "proto3";
+
+package com.google.cloud.solutions.catalogtagrecording;
+
+import "google/protobuf/timestamp.proto";
+
+message EntityTagOperationRecord {
+  .google.protobuf.Timestamp reconcile_time = 1;
+
+  CatalogEntry entity = 5;
+
+  AuditInformation audit_information = 10;
+
+  repeated CatalogTag tags = 15;
+}
+
+message CatalogEntry {
+  string entity_id = 1;
+
+  string linked_resource = 2;
+
+  string sql_resource = 3;
+}
+
+message AuditInformation {
+  string insert_id = 1;
+
+  .google.protobuf.Timestamp job_time = 5;
+
+  string actuator = 10;
+
+  OperationInformation operation = 15;
+}
+
+message OperationInformation {
+  string type = 1;
+  string resource = 5;
+}
+
+message CatalogTag {
+  string tag_id = 1;
+
+  string template_id = 2;
+
+  string template_name = 3;
+
+  string column = 4;
+
+  repeated CatalogTagField fields = 10;
+}
+
+message CatalogTagField {
+  string field_id = 1;
+
+  string field_name = 2;
+
+  CatalogTagFieldKinds kind = 3;
+
+  oneof value {
+    bool bool_value = 11;
+    double double_value = 12;
+    string string_value = 13;
+    .google.protobuf.Timestamp timestamp_value = 14;
+    EnumValue enum_value = 15;
+  }
+
+  message EnumValue {
+    string display_name = 1;
+  }
+
+  enum CatalogTagFieldKinds {
+    UNKNOWN_TAG_FIELD_KIND = 0;
+    BOOL = 1;
+    DOUBLE = 2;
+    STRING = 3;
+    TIMESTAMP = 4;
+    ENUM = 5;
+  }
+}

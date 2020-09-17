@@ -1,0 +1,24 @@
+{
+  "name": "projects/my-project-id/locations/us/entryGroups/@bigquery/entries/cHJvamVjdHMvZ29vZ2xlLmNvbTphbmFudGQvZGF0YXNldHMvTXlEYXRhU2V0L3RhYmxlcy9Nb2NrUGlpUHJvY2Vzc2Vk/tags/CUzSbDlKy_z_bF",
+  "template": "projects/my-project-id/locations/us/tagTemplates/sample_catalog_tag",
+  "fields": {
+    "primary_source": {
+      "displayName": "Primary Source",
+      "boolValue": true
+    },
+    "business_unit": {
+      "displayName": "Business Unit",
+      "stringValue": "Professional Services",
+      "order": 1
+    },
+    "data_category": {
+      "displayName": "Data Category",
+      "enumValue": {
+        "displayName": "PII"
+      },
+      "order": 2
+    }
+  },
+  "column": "someColumn",
+  "templateDisplayName": "Testing Sample Catalog Tag"
+}

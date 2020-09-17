@@ -1,0 +1,48 @@
+{
+  "protoPayload": {
+    "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+    "status": {},
+    "authenticationInfo": {
+      "principalEmail": "runner@organization.com"
+    },
+    "requestMetadata": {
+      "callerIp": "1.2.3.4",
+      "callerSuppliedUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36,gzip(gfe),gzip(gfe)",
+      "requestAttributes": {
+        "time": "2020-09-09T15:46:06.818985792Z",
+        "auth": {}
+      },
+      "destinationAttributes": {}
+    },
+    "serviceName": "datacatalog.googleapis.com",
+    "methodName": "google.cloud.datacatalog.v1.DataCatalog.UpdateTag",
+    "authorizationInfo": [
+      {
+        "resource": "projects/my-project-id/locations/us/entryGroups/@bigquery/entries/cHJvamVjdHMvZ29vZ2xlLmNvbTphbmFudGQvZGF0YXNldHMvTXlEYXRhU2V0L3RhYmxlcy9Nb2NrUGlpUHJvY2Vzc2Vk/tags/CUzSbDlKy_z_bF",
+        "permission": "datacatalog.tagTemplates.use",
+        "granted": true,
+        "resourceAttributes": {}
+      }
+    ],
+    "resourceName": "projects/my-project-id/locations/us/entryGroups/@bigquery/entries/cHJvamVjdHMvZ29vZ2xlLmNvbTphbmFudGQvZGF0YXNldHMvTXlEYXRhU2V0L3RhYmxlcy9Nb2NrUGlpUHJvY2Vzc2Vk/tags/CUzSbDlKy_z_bF",
+    "request": {
+      "@type": "type.googleapis.com/google.cloud.datacatalog.v1.UpdateTagRequest"
+    },
+    "response": {
+      "@type": "type.googleapis.com/google.cloud.datacatalog.v1.Tag"
+    }
+  },
+  "insertId": "1e833o3ckna",
+  "resource": {
+    "type": "audited_resource",
+    "labels": {
+      "method": "google.cloud.datacatalog.v1.DataCatalog.UpdateTag",
+      "project_id": "my-project-id",
+      "service": "datacatalog.googleapis.com"
+    }
+  },
+  "timestamp": "2020-09-09T15:46:06.818494983Z",
+  "severity": "NOTICE",
+  "logName": "projects/my-project-id/logs/cloudaudit.googleapis.com%2Factivity",
+  "receiveTimestamp": "2020-09-09T15:46:08.417640591Z"
+}

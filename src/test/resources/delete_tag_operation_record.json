@@ -1,0 +1,32 @@
+{
+  "reconcileTime": "2020-09-11T10:52:01.789Z",
+  "entity": {
+    "entityId": "projects/my-project-id/locations/us/entryGroups/@bigquery/entries/tableBentryId",
+    "linkedResource": "//bigquery.googleapis.com/projects/myproject1/datasets/mydataset1/tables/TableB"
+  },
+  "auditInformation": {
+    "insertId": "1g6b184ckhz",
+    "jobTime": "2020-09-09T15:52:57.614245506Z",
+    "actuator": "runner@organization.com",
+    "operation": {
+      "type": "google.cloud.datacatalog.v1.DataCatalog.DeleteTag",
+      "resource": "projects/my-project-id/locations/us/entryGroups/@bigquery/entries/tableBentryId/tags/CUzSbDlKy_z_bF"
+    }
+  },
+  "tags": [
+    {
+      "tagId": "projects/my-project-id/locations/us/entryGroups/@bigquery/entries/tableBentryId/tags/TableBIdTag2Id",
+      "templateId": "projects/my-project-id/locations/us-central1/tagTemplates/pii_tag",
+      "templateName": "PII",
+      "column": "phone_number",
+      "fields": [
+        {
+          "fieldId": "type",
+          "fieldName": "PII Type",
+          "kind": "STRING",
+          "stringValue": "TELEPHONE_ID"
+        }
+      ]
+    }
+  ]
+}

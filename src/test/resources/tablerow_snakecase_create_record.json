@@ -1,0 +1,71 @@
+{
+  "reconcile_time": "2020-09-11T10:52:01.789Z",
+  "entity": {
+    "entity_id": "projects/my-project-id/locations/us/entryGroups/@bigquery/entries/cHJvamVjdHMvZ29vZ2xlLmNvbTphbmFudGQvZGF0YXNldHMvTXlEYXRhU2V0L3RhYmxlcy9Nb2NrUGlpUHJvY2Vzc2Vk",
+    "linked_resource": "//bigquery.googleapis.com/projects/myproject1/datasets/mydataset1/tables/TableA"
+  },
+  "audit_information": {
+    "insert_id": "sb27clc2el",
+    "job_time": "2020-09-09T15:25:57.088307939Z",
+    "actuator": "runner@organization.com",
+    "operation": {
+      "type": "google.cloud.datacatalog.v1.DataCatalog.CreateTag",
+      "resource": "projects/my-project-id/locations/us/entryGroups/@bigquery/entries/cHJvamVjdHMvZ29vZ2xlLmNvbTphbmFudGQvZGF0YXNldHMvTXlEYXRhU2V0L3RhYmxlcy9Nb2NrUGlpUHJvY2Vzc2Vk"
+    }
+  },
+  "tags": [
+    {
+      "tag_id": "projects/my-project-id/locations/us/entryGroups/@bigquery/entries/cHJvamVjdHMvZ29vZ2xlLmNvbTphbmFudGQvZGF0YXNldHMvTXlEYXRhU2V0L3RhYmxlcy9Nb2NrUGlpUHJvY2Vzc2Vk/tags/CUzSbDlKy_z_bF",
+      "template_id": "projects/my-project-id/locations/us/tagTemplates/sample_catalog_tag",
+      "template_name": "Testing Sample Catalog Tag",
+      "column": "columnName",
+      "fields": [
+        {
+          "field_id": "primary_source",
+          "field_name": "Primary Source",
+          "kind": "BOOL",
+          "bool_value": true
+        },
+        {
+          "field_id": "business_unit",
+          "field_name": "Business Unit",
+          "kind": "STRING",
+          "string_value": "Professional Services"
+        },
+        {
+          "field_id": "updated_timestamp",
+          "field_name": "Updated Timestamp",
+          "kind": "TIMESTAMP",
+          "timestamp_value": "2020-09-09T15:25:00Z"
+        },
+        {
+          "field_id": "data_category",
+          "field_name": "Data Category",
+          "kind": "ENUM",
+          "enum_value": {
+            "display_name": "PII"
+          }
+        },
+        {
+          "field_id": "version_number",
+          "field_name": "Tag Version",
+          "kind": "DOUBLE",
+          "double_value": 1.2
+        }
+      ]
+    },
+    {
+      "tag_id": "projects/my-project-id/locations/us/entryGroups/@bigquery/entries/cHJvamVjdHMvZ29vZ2xlLmNvbTphbmFudGQvZGF0YXNldHMvTXlEYXRhU2V0L3RhYmxlcy9Nb2NrUGlpUHJvY2Vzc2Vk/tags/TableAIdTag2Id",
+      "template_id": "projects/my-project-id/locations/us-central1/tagTemplates/pii_tag",
+      "template_name": "PII",
+      "fields": [
+        {
+          "field_id": "type",
+          "field_name": "PII Type",
+          "kind": "STRING",
+          "string_value": "USER_ID"
+        }
+      ]
+    }
+  ]
+}
