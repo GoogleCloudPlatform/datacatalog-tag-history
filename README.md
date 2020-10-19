@@ -90,7 +90,7 @@ For this tutorial, you need a Google Cloud [project](https://cloud.google.com/re
     ```shell script
     gcloud services enable \
     bigquery.googleapis.com \
-    storage_component.googleapis.com \
+    storage_component \
     datacatalog.googleapis.com \
     dataflow.googleapis.com \
     pubsub.googleapis.com
@@ -288,13 +288,13 @@ If your project does not have a user-created service account create one using fo
       -Dexec.args=" \
     --streaming=true \
     --project=${PROJECT_ID} \
-    --serviceAccount=${TAG_HISTORY_SERVICE_ACCOUNT_EMAIL}
+    --serviceAccount=${TAG_HISTORY_SERVICE_ACCOUNT_EMAIL} \
     --runner=DataflowRunner \
     --gcpTempLocation=gs://${TEMP_GCS_BUCKET}/temp/ \
     --stagingLocation=gs://${TEMP_GCS_BUCKET}/staging/ \
     --workerMachineType=n1-standard-1 \
     --region=${REGION_ID} \
-    --tagsBigqueryTable=${PROJECT_ID}:${DATASET_ID}.${TABLE_ID} \    
+    --tagsBigqueryTable=${PROJECT_ID}:${DATASET_ID}.${TABLE_ID} \
     --catalogAuditLogsSubscription=projects/${PROJECT_ID}/subscriptions/${LOGS_SUBSCRIPTION_ID}"
     ```
 
